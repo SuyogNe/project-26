@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+        class intro
+        {
+        constructor(name)
+        {
+            this.intro=name;
+        }
+        static hello(x)
+        {
+            return "hello... my name is "+ x.intro
+        }
+        static welcome(x){
+            return "I study in  "+x.intro;
+        }
+        hi(){
+            return "Hi "+ this.intro;
+        }
+        static place(x){
+            return "I live in "+x.intro;
+        }
+        }
+        myname= new intro("Suyog Neupane")
+        mygrade= new intro("grade 8")
+        hi=new intro("everyone!")
+        stay=new intro("Dhapakhel, Lalitpur, Nepal")
+        document.getElementById("p1").innerHTML=hi.hi();
+        document.getElementById("p2").innerHTML=intro.hello(myname);
+        document.getElementById("p3").innerHTML=intro.welcome(mygrade);
+        document.getElementById("p4").innerHTML=intro.place(stay);
+    </script>
+</body>
+</html>
